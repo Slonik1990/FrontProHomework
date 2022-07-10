@@ -15,8 +15,8 @@ if (email.indexOf("@") === -1) {
 }
 document.write(`
 <ul>
-    <li>Full name: ${firstName} ${lastName}</li>
+    <li>Full name: <b>${firstName} ${lastName}</b></li>
     <li>Email: ${email}</li>
-    <li>Age: ${age}</li>
+    <li>Age: <b>${age}</b></li>
 </ul>        
 `);
