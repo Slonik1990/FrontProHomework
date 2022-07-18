@@ -1,0 +1,50 @@
+html, body {
+    color: #353c4d;
+    font-size: 20px;
+    font-family: "Nerko One", cursive;
+}
+
+.wrapper {
+    width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    background: #55aa55;
+    border-radius: 6px;
+    padding: 10px;
+
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    border-radius: 6px;
+    background: white;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:10px;
+}
+
+.person {
+    height: 70px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.info:last-of-type {
+    justify-content: flex-end;
+}
+
+.info img {
+    margin-left: 5px;
+    height: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
