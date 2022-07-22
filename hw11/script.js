@@ -10,7 +10,6 @@ function innerSumComparing(array1, array2){
     if (arrSumOfNumbers(array1) < arrSumOfNumbers(array2)) return array2;
     return array1;
 }
-
 function arrSumOfNumbers(array){
     let sum = 0;
     for (let i = 0; i < array.length; i++) {
