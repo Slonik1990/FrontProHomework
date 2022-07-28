@@ -38,5 +38,4 @@ const tableRows = monday.concat(tuesday)
         }
     ).join("");
 
-console.log(monday)
 document.write(`<table>${tableRows}</table>`);
