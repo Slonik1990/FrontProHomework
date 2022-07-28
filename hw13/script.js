@@ -1,5 +1,3 @@
-
-const TRs = [];
 const amount = 100;
 const monday = [
     ['Write a tutorial', 180],
@@ -11,11 +9,13 @@ const tuesday = [
     ['A whole lot of nothing', 240]
 ];
 
+const TRs = [];
 monday.concat(tuesday)
     .map(
         function (task) {
-            task[1] /= 60;
-            return task;
+            const taskCopy = task.slice();//доп переменная, чтобы не изменялись исходные массивы
+            taskCopy[1] /= 60;
+            return taskCopy;
         }
     ).filter(
         function (task) {
@@ -23,8 +23,9 @@ monday.concat(tuesday)
         }
     ).map(
         function (task) {
-            task.push(task[1] * amount);
-            return task;
+            const taskCopy = task.slice();
+            taskCopy.push(taskCopy[1] * amount);
+            return taskCopy;
         }
     ).forEach(
         function (task) {
@@ -40,3 +41,5 @@ document.write(`   <table>
    ${TRs.join("")}
    </table>
 `);
+console.log(monday)
+console.log(tuesday)
