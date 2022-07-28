@@ -9,8 +9,8 @@ const tuesday = [
     ['A whole lot of nothing', 240]
 ];
 
-const TRs = [];
-monday.concat(tuesday)
+
+const tableRows = monday.concat(tuesday)
     .map(
         function (task) {
             const taskCopy = task.slice();//доп переменная, чтобы не изменялись исходные массивы
@@ -21,25 +21,22 @@ monday.concat(tuesday)
         function (task) {
             return task[1] > 2;
         }
-    ).map(
+    )
+    .map(
         function (task) {
             const taskCopy = task.slice();
             taskCopy.push(taskCopy[1] * amount);
             return taskCopy;
         }
-    ).forEach(
+    ).map(
         function (task) {
-            TRs.push(`
-            <tr>
+            return `<tr>
                 <td>Task name: ${task[0]}</td>
                 <td>Taks duration: ${task[1]} hours</td>
                 <td>Task amount: $${task[2]}</td>
-            </tr>`)
+            </tr>`;
         }
-    )
-document.write(`   <table>
-   ${TRs.join("")}
-   </table>
-`);
+    ).join("");
+
 console.log(monday)
-console.log(tuesday)
+document.write(`<table>${tableRows}</table>`);
