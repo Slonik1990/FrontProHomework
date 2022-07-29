@@ -38,11 +38,24 @@ const tableRows = monday.concat(tuesday)
     ).map(
         function (task) {
             return `<tr>
-                <td>Task name: ${task[0]}</td>
-                <td>Taks duration: ${task[1]} hours</td>
-                <td>Task amount: $${task[2]}</td>
+                <td>${task[0]}</td>
+                <td>${task[1]} hours</td>
+                <td>${task[2]}</td>
             </tr>`;
         }
     ).join("");
 
-document.write(`<table>${tableRows}</table>`);
+document.write(`
+<table>
+<thead>
+    <th>Task name </th>
+    <th>Taks duration, hours </th>
+    <th>Task amount, $</th>
+</thead>
+<tbody>
+${tableRows}
+</tbody>
+</table>
+`)
+
+document.write(``);
