@@ -26,7 +26,7 @@ let dcHeroes = [
 Array.prototype.heroesRender = function (directory) {
     let tableRows = [];
     for (let i = 0; i < this.length; i++) {
-        let imageName = this[i].name.toLowerCase().replaceAll(" ","");
+        let imageName = this[i].name.toLowerCase().replaceAll(" ", "");
         tableRows.push(`
             <tr>
                  <td>${this[i].name}</td>
@@ -36,7 +36,8 @@ Array.prototype.heroesRender = function (directory) {
     }
     tableRows = `<tbody>${tableRows.join()}</tbody>`;
     let tableHeader = `<thead><th>Name</th><th>Icon</th></thead>`
- document.write(`<table>
+
+    document.write(`<table>
                     ${tableHeader};
                     ${tableRows};
                 </table>`);
