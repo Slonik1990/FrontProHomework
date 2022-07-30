@@ -36,7 +36,7 @@ Array.prototype.heroesRender = function (directory) {
     ).join("");
 
     tableRows = `<tbody>${tableRows}</tbody>`;
-    let tableHeader = `<thead><th>Name</th><th>Icon</th></thead>`
+    let tableHeader = `<thead><tr><th>Name</th><th>Icon</th></tr></thead>`
 
     document.write(`<table>${tableHeader}${tableRows}</table>`);
 }
