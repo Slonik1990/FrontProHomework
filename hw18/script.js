@@ -205,8 +205,14 @@ const lector = new User("Leo Smith", 25, "Lector");
 lector.addCourse(new LectorCourse("Front-end Pro", 78, 79));
 lector.addCourse(new LectorCourse("Java Enterprise", 85, 85));
 
+const userWithDifferntRoles = new User("Hannibal", 50, "Lector");
+userWithDifferntRoles.addCourse(new AdminCourse("Front-end Pro", 10, "Leo Smith"));
+userWithDifferntRoles.addCourse(new LectorCourse("Front-end Pro", 78, 79));
+userWithDifferntRoles.addCourse(new StudentCourse("Java Enterprise", 23));
+
+
 const hillel = new School("Hillel");
-hillel.addUsers(student1, student2, student3 , student4, admin, lector);
+hillel.addUsers(student1, student2, student3 , student4, admin, lector, userWithDifferntRoles);
 
 hillel.renderAllUsers();
 console.log(hillel.getNumOfUsers());
