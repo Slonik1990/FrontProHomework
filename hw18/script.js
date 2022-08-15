@@ -129,7 +129,7 @@ class User {
         </div>`;
     }
 
-    userAsHTML(){
+    userToHTML(){
         return `
             <div class="user">
                 <div class="user__info">
@@ -168,7 +168,7 @@ class School {
     allUsersToHTML(){
         let usersAsString = this.users.map(
             function (item){
-                return item.userAsHTML();
+                return item.userToHTML();
             },
         ).join("");
 
