@@ -1,4 +1,6 @@
 "use strict";
+
+
 const HAMBURGER = {
     small: {price: 5, calories: 20},
     big: {price: 10, calories: 40},
@@ -15,6 +17,7 @@ class Burger {
         this.burgerCreator();
     }
 
+    //здесь могли бы быть проверки на корректность ввода и тд
     burgerCreator(){
         this.size = prompt("Input size of the burger: big or small");
         this.stuffing = prompt("Input one of the fillings: salad, potato or cheese");
