@@ -17,7 +17,7 @@ class Burger {
         this.burgerCreator();
     }
 
-    //здесь могли бы быть проверки на корректность ввода и тд
+    //здесь могли бы быть проверки на корректность ввода и тд, но этим пренебрег
     burgerCreator(){
         this.size = prompt("Input size of the burger: big or small");
         this.stuffing = prompt("Input one of the fillings: salad, potato or cheese");
@@ -60,25 +60,25 @@ class Burger {
 
     burgerTotalPrice(){
         return this.burgerParametersList().reduce(
-            function (currentAccum, parameter){
-                return ([parameter] in HAMBURGER) ? currentAccum + HAMBURGER[parameter].price : currentAccum;
+            function (accum, parameter){
+                return ([parameter] in HAMBURGER) ? accum + HAMBURGER[parameter].price : accum;
             }, 0);
 
         //без проверки на наличие в HAMBURGER
         // return this.burgerParametersList().reduce(
-        //     (currentAccum, currentParameter) => currentAccum + HAMBURGER[currentParameter].price,
+        //     (accum, currentParameter) => currentAccum + HAMBURGER[currentParameter].price,
         //     0);
     }
 
     burgerTotalCalories(){
         return this.burgerParametersList().reduce(
-            function (currentAccum, parameter){
-                return ([parameter] in HAMBURGER) ? currentAccum + HAMBURGER[parameter].calories : currentAccum;
+            function (accum, parameter){
+                return ([parameter] in HAMBURGER) ? accum + HAMBURGER[parameter].calories : accum;
             }, 0);
 
         //без проверки на наличие в HAMBURGER
         // return this.burgerParametersList().reduce(
-        //     (currentAccum, currentParameter) => currentAccum + HAMBURGER[currentParameter].calories,
+        //     (accum, currentParameter) => accum + HAMBURGER[currentParameter].calories,
         //     0);
     }
 
@@ -90,6 +90,7 @@ class Burger {
 
 
 let myBurger = new Burger();
+
 console.log(myBurger);
 console.log(myBurger.burgerParametersList());
 console.log(myBurger.burgerInfo());
