@@ -19,7 +19,7 @@ function getParentElementsArray(start, level){
     }
     return parents;
 }
-//добавит классы первому и последнему элементу принимаемого родителя
+
 function addingClassesToFirstLastChild(parentElement){
     parentElement.firstElementChild.classList.add("first");
     parentElement.lastElementChild.classList.add("last");
@@ -43,7 +43,7 @@ function redGreenCleaner(current){
 }
 root.onclick = function (){
     redGreenCleaner(root);
-    const randomLevel = Math.floor(Math.random()*3+1);
+    const randomLevel = Math.ceil(Math.random()*3);
     firstLastChildDecorator(root, randomLevel);
 }
 
