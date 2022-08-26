@@ -1,13 +1,20 @@
-const root = document.querySelector(".root");
+/*
+* Реализовал задачу через получение массива родительских элементов, у которых потомки находятся на
+* необходимом уровне вложенности и последующее применение изменений к каждому родителю из массива.
+*
+* Можно было поступить чуть иначе и сразу в переборе применять изменения и не собирать никакой массив,
+* но в выбранном подходе мне понравилась возможность переиспользования функции получения массива
+* родителей для других задач*/
 
+
+
+const root = document.querySelector(".root");
 
 function firstLastChildDecorator(startElement, level){
     const parentElements = getParentElementsArray(startElement, level);
     parentElements.forEach((parent) => addingClassesToFirstLastChild(parent));
 }
 
-//функция которая рекурсивно вернет массив родительских элементов
-//с детишками которых будут происходить изменения
 function getParentElementsArray(start, level){
     const parents = [];
     if (level === 1) {
